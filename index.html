@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>World Cup Winner Predictor 2026 | by LINA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script defer src="teams.js"></script>
+    <script defer src="data.js"></script>
+    <script defer src="simulation.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<div class="background-animation"></div>
+
+<header>
+
+    <div class="logo">
+
+        <img src="images/trophy.png" alt="World Cup">
+
+        <h1>World Cup Winner Predictor 2026</h1>
+
+        <p>Professional AI Tournament Simulation</p>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#groups">Groups</a></li>
+
+            <li><a href="#bracket">Bracket</a></li>
+
+            <li><a href="#statistics">Statistics</a></li>
+
+            <li><a href="#prediction">Prediction</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section id="home" class="hero">
+
+    <div class="hero-left">
+
+        <h2>
+
+            Predict The Next FIFA World Cup Champion
+
+        </h2>
+
+        <p>
+
+            Simulate every match from the group stage to the final using a realistic prediction engine.
+
+        </p>
+
+        <div class="buttons">
+
+            <button id="startSimulation">
+
+                Start Simulation
+
+            </button>
+
+            <button id="randomPrediction">
+
+                Random Prediction
+
+            </button>
+
+            <button id="resetTournament">
+
+                Reset Tournament
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <img src="images/stadium.jpg" alt="Stadium">
+
+    </div>
+
+</section>
+
+<section class="quick-stats">
+
+    <div class="card">
+
+        <h3>Qualified Teams</h3>
+
+        <span id="teamCount">
+
+            48
+
+        </span>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Matches</h3>
+
+        <span id="matchCount">
+
+            104
+
+        </span>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Predictions</h3>
+
+        <span id="predictionCount">
+
+            0
+
+        </span>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Champion</h3>
+
+        <span id="championName">
+
+            -
+
+        </span>
+
+    </div>
+
+</section>
+
+<section id="groups">
+
+<h2>
+
+Group Stage
+
+</h2>
+
+<div class="groups-container">
+
+<!-- سيتم إنشاء جميع المجموعات بواسطة JavaScript -->
+
+</div>
+
+</section>
+
+<section id="bracket">
+
+<h2>
+
+Knockout Stage
+
+</h2>
+
+<div id="tournamentBracket">
+
+</div>
+
+</section><section id="statistics">
+
+    <h2>Team Strength & Win Probability</h2>
+
+    <div class="stats-container">
+
+        <div class="stats-left">
+
+            <h3>Top Teams Probability</h3>
+
+            <div id="probabilityTable">
+
+                <!-- JavaScript will fill this -->
+
+            </div>
+
+        </div>
+
+        <div class="stats-right">
+
+            <h3>Live Match Log</h3>
+
+            <div id="matchLog" class="log-box">
+
+                <p>Waiting for simulation...</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="prediction">
+
+    <h2>AI Prediction Engine</h2>
+
+    <div class="prediction-box">
+
+        <p>Click below to generate a full tournament simulation based on team strength and random variance.</p>
+
+        <button id="generateAI">Generate AI Prediction</button>
+
+        <div id="aiResult">
+
+            <!-- Result will appear here -->
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="champion-section">
+
+    <h2>🏆 Champion Reveal</h2>
+
+    <div class="champion-card">
+
+        <img src="images/trophy.png" alt="Trophy">
+
+        <h1 id="finalChampion">-</h1>
+
+        <p>2026 World Cup Winner</p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>World Cup Winner Predictor 2026 | by LINA</p>
+
+    <p>Built for simulation and educational purposes</p>
+
+</footer>
+
+<!-- Modal -->
+
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <h2>Match Result</h2>
+
+        <div id="modalBody"></div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

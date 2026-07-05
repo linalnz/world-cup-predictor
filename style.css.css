@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #070b1a;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* خلفية متحركة */
+.background-animation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top, #0f1b3d, #050814);
+    z-index: -1;
+    animation: moveBg 10s infinite alternate;
+}
+
+@keyframes moveBg {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(40deg); }
+}
+
+/* الهيدر */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo h1 {
+    font-size: 18px;
+    color: gold;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: gold;
+}/* ===== HERO SECTION ===== */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 50px;
+    min-height: 90vh;
+}
+
+.hero-left {
+    max-width: 50%;
+}
+
+.hero-left h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.hero-left p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+/* ===== BUTTONS ===== */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#startSimulation {
+    background: gold;
+    color: black;
+}
+
+#randomPrediction {
+    background: #1f6fff;
+    color: white;
+}
+
+#resetTournament {
+    background: crimson;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ===== HERO IMAGE ===== */
+
+.hero-right img {
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+/* ===== QUICK STATS ===== */
+
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border: 1px solid gold;
+}
+
+.card h3 {
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.card span {
+    font-size: 28px;
+    font-weight: bold;
+    color: gold;
+}/* ===== SECTIONS GENERAL ===== */
+
+section {
+    padding: 60px 50px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: gold;
+}
+
+/* ===== GROUPS ===== */
+
+.groups-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.group-box {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.group-box:hover {
+    transform: translateY(-5px);
+    border: 1px solid gold;
+}
+
+.group-box h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #1f6fff;
+}
+
+/* ===== BRACKET ===== */
+
+#tournamentBracket {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bracket-round {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.match {
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 180px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.match:hover {
+    transform: scale(1.05);
+    border: 1px solid gold;
+}
+
+/* ===== STATISTICS ===== */
+
+.stats-container {
+    display: flex;
+    gap: 30px;
+}
+
+.stats-left,
+.stats-right {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.log-box {
+    height: 300px;
+    overflow-y: auto;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* ===== PREDICTION ===== */
+
+.prediction-box {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#generateAI {
+    background: gold;
+    color: black;
+    margin-top: 20px;
+}
+
+/* ===== CHAMPION ===== */
+
+.champion-card {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(145deg, rgba(255,215,0,0.2), rgba(255,255,255,0.05));
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.champion-card img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+#finalChampion {
+    font-size: 40px;
+    color: gold;
+}
+
+/* ===== MODAL ===== */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background: #111a33;
+    width: 400px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.6;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        max-width: 100%;
+    }
+
+    .quick-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .groups-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-container {
+        flex-direction: column;
+    }
+}
